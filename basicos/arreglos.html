@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const a=[];
+        const b=[1,true,"hola",["A","B","C"]];
+        console.log(a);
+        console.log(b);
+        console.log(b.length)
+        console.log(b[2]);
+        console.log(b[3][2])
+
+        const c = Array.of("X","Y","Z",1,2,3);
+        console.log(c);
+
+        const d = Array(100).fill(false);
+        console.log(d);
+        //forma vieja de declarar arreglos
+        const f = new Array(1,2,3,true,false)
+        console.log(f);
+
+
+        //metodos de los arreglos
+        const colores =["Rojo","Verde","Azul"]
+
+        console.log(colores)
+        //push agrega un elemento al final
+        colores.push("Negro");
+        console.log(colores)
+        //pop elimina el ultimo elemento del arreglo
+        colores.pop();
+        console.log(colores);
+
+        //metodo foreach arreglo
+        colores.forEach(function(valor,index){
+            console.log(`<li id = ${index}> ${valor}</li>`)
+        });
+
+
+    </script>
+</body>
+</html>

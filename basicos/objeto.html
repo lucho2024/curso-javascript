@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //un objeto
+        const b={
+
+        };
+
+        const c = new Object();
+
+        const luis = {
+            nombre:"luis",
+            apellido:"montoya",
+            edad:35,
+            pasatiempos:["correr","hacer ejercicio","comer"],
+            soltero:false,
+            contacto:{
+                email:"luismontoya@gmail.com",
+                twitter:"@luishm29",
+                movil:"2541545"
+            },
+            saludar:function(){
+                console.log("Hola mi nombre es "+this.nombre);
+            },
+            decirPasatiempos:function(){
+                console.log(`mi pasatiempo preferido es ${this.pasatiempos[2]}`)
+            }
+        }
+        console.log(luis.nombre)
+        console.log(luis.contacto)
+        console.log(luis.pasatiempos[1])
+        luis.saludar();
+        luis.decirPasatiempos();
+        //muestra los atributos del objeto
+        console.log(Object.keys(luis));
+        //muestra el valor de los atributos
+        console.log(Object.values(luis));
+        //verifica si un atributo existe en ese objeto
+        console.log(luis.hasOwnProperty("nombre"));
+
+    </script>
+</body>
+</html>

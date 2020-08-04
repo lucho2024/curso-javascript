@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const mapa=new Map();
+        mapa.set("nombre","luis");
+        mapa.set("apellido","montoya");
+        mapa.set("edad",35);
+
+        console.log(mapa);
+        console.log(mapa.size);
+        console.log(mapa.has("correo"));
+        console.log(mapa.has("nombre"));
+        console.log(mapa.get("nombre"));
+        mapa.set("nombre","luis montoya");
+        console.log(mapa.get("nombre"));
+        mapa.set(19,"diecinueve");
+        mapa.set(false,"false");
+        mapa.set({},{});
+
+        mapa.delete("apellido");
+        console.log(mapa);
+        for(let [key,value] of mapa){
+            console.log(`LLave ${key}, Valor ${value}`);
+        }
+        
+        for(let elementos of mapa){
+            console.log(elementos);
+        }
+        const mapa2 = new Map([
+            ["nombre","obama"],
+            ["edad",7],
+            ["animal","perro"],
+            [null,"nulo"]
+        ]);
+        console.log(mapa2);
+
+        const llavesMapa2=[...mapa2.keys()];
+        const valoresMapa2=[...mapa2.values()];
+
+        console.log(llavesMapa2);
+        console.log(valoresMapa2);
+    </script>
+</body>
+</html>

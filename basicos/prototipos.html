@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*POO
+        clase-modelo a seguir
+        objeto- instancia de una clase , copia del modelo
+        atributos-propiedades
+        metodos-aciones
+        */
+        //funcion constructura
+
+        function Animal(nombre,genero){
+            this.nombre=nombre;
+            this.genero=genero;
+
+          /*  this.sonar = function(){
+                console.log("hago sonidos por que estoy vivo");
+
+            }*/
+        }
+
+        Animal.prototype.sonar=function(){
+            console.log("hago sonidos por que estoy vivo");
+        }
+        Animal.prototype.saludar=function(){
+            console.log(`Hola me llamo ${this.nombre}`);
+        }
+        const snoopy = new Animal("Snoopy","Macho"),
+              lolaBunny=new Animal("Lola Bunny ","Hembra");
+
+        snoopy.sonar();
+        snoopy.saludar();
+
+        lolaBunny.sonar();
+        lolaBunny.saludar();
+    </script>
+</body>
+</html>

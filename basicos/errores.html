@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        try {
+            console.log("En el try se agrega el codigo a evaluar ");
+            noexiste;
+            console.log("segundo mensaje")
+        } catch (error) {
+            console.log("catch , captura cualquier error");
+            console.log(error)
+        }finally{
+            console.log("El bloque finally se ejecutara siempre al final "+
+            "de un bloque try-catch");
+        }
+        try{
+            let numero ="y";
+            if(isNaN(numero)){
+                throw new Error("El caracter introducido no es numero");
+            }
+            console.log(numero*numero);
+        }catch(error){
+            console.log(`se produjo el siguiente error  ${error}`);
+        }
+    </script>
+</body>
+</html>

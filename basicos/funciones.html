@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//Funcion Declarada
+
+function funcion(){
+    
+    console.log("uno")
+    console.log("dos")
+    console.log("tres")
+}
+function funcionretorna(){
+
+    return "La funcion ha retornado una cadena de texto";
+}
+//Invocacion de funcion
+//funcion();
+let valorFuncion = funcionretorna();
+//console.log(valorFuncion)
+
+//funcion con parametros
+function saludar(nombre="Desconocido",edad=0){
+    console.log(`Hola mi nombre es ${nombre} y tengo 
+    ${edad} años `);
+}
+
+saludar("Apolo",2)
+saludar();
+
+//funcion expresada
+const funcionEx= function(){
+
+    return "Funcion expresada , no se muesta hasta que se declare la variable";
+}
+
+funcionEx();
+    </script>
+</body>
+</html>
