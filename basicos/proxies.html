@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const persona ={
+            nombre:"",
+            apellido:"",
+            edad:0
+        }
+        const manejador ={
+            set(obj,prop,valor){
+                // para no crear mas atributos desde afuera
+                if(Object.keys(obj).indexOf(prop)===-1){
+                    return console.error(`la propiedad ${prop} no existe en el objecto persona`);
+                }
+                if(
+                    (prop=="nombre"|| prop==="apellido")&&
+                    !(/^[A-Za-zÑñ\s]+$/g.test(valor))
+                ){
+                    console.error("La propiedad solo acepta letras y espacios en blanco")
+                }
+                obj[prop]=valor;
+            }
+        }
+        const luis = new Proxy(persona,manejador);
+        luis.nombre="luis";
+        luis.apellido="montoya";
+        luis.edad=23;
+        //agregar atributo
+        luis.twitter="@luishm29";
+
+        console.log(luis);
+    </script>
+</body>
+</html>
